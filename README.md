@@ -1,4 +1,4 @@
-# Test task for FunBox
+# Test task for 1C - Rarus
 
 ### Installing packages
 Run 'npm i' for install packages
