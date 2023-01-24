@@ -1,0 +1,199 @@
+.sales {
+    padding-bottom: 48px;
+
+    h2 {
+        width: 100%;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    li {
+        max-width: 355px;
+        overflow: hidden;
+        position: relative;
+        color: $white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+
+        h3 {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 8px;
+            line-height: 10px;
+        }
+
+        div {
+            position: absolute;
+            top: 35px;
+            left: 20px;
+            max-width: 125px;
+
+            img {
+                margin-bottom: 10px;
+            }
+        }
+
+        &:hover {
+            transform: translate(5px, -5px);
+        }
+    }
+
+    .sales__card--hp {
+        box-shadow: none;
+    }
+
+    .sales__card--hp a > div {
+        display: flex;
+        width: 100%;
+        max-width: 160px;
+        top: 18px;
+        left: 28px;
+
+        h3 {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 2px;
+        }
+
+        p {
+            font-size: 8px;
+            line-height: 10px;
+        }
+
+        div {
+            top: 0;
+            left: 35px;
+        }
+    }
+
+    .sales__card--text {
+        color: $black;
+    }
+
+    .sales__card--red-1 {
+        div {
+            max-width: 170px;
+
+            p {
+                max-width: 125px;
+            }
+        }
+    }
+
+    .sales__card--red-2 {
+        color: $red;
+
+        div {
+            top: 50px;
+        }
+    }
+
+    .sales__card--red-3 {
+        color: $red;
+        text-align: center;
+
+        div {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 130px;
+        }
+
+        p {
+            color: $gray;
+        }
+    }
+}
+
+@media(min-width: $tablet) {
+    .sales {
+        padding-bottom: 72px;
+
+        h2 {
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 36px;
+        }
+
+        li {
+            box-shadow: 0px 6px 30px 4px rgba(32, 32, 32, 0.1);
+
+            div {
+                top: 45px;
+            }
+        }
+    }
+}
+
+@media(min-width: $desktop) {
+    .sales {
+        ul {
+            gap: 34px;
+        }
+
+        li {
+            max-width: 360px;
+            
+            h3 {
+                font-size: 21px;
+                line-height: 25px;
+            }
+
+            div {
+                max-width: 145px;
+            }
+
+            p {
+                font-size: 11px;
+                line-height: 13px;
+            }
+
+            &:first-of-type {
+                div {
+                    top: 60px;
+                }
+            }
+        }
+
+        .sales__card--red-1 {
+            div {
+                max-width: 195px;
+            }
+        }
+    
+        .sales__card--red-3 {
+            color: $red;
+            text-align: center;
+    
+            div {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 155px;
+            }
+    
+            p {
+                color: $gray;
+            }
+        }
+    }
+}

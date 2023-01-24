@@ -1,0 +1,22 @@
+.logo {
+    font-family: $rosario;
+    color: $red;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.105em;
+}
+
+@media(min-width: $tablet) {
+    .logo {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media(min-width: $desktop) {
+    .logo {
+        font-size: 22px;
+        line-height: 27px;
+    }
+}

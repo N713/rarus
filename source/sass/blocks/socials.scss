@@ -1,0 +1,40 @@
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    li {
+        margin-right: 12px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $gray;
+        border-radius: 100%;
+        background-color: $white;
+        transition: all 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $red;
+        }
+    }
+}
+
+@media(min-width: $desktop) {
+    .socials {
+        a {
+            width: 40px;
+            height: 40px;
+        }
+
+        li {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+    }
+}

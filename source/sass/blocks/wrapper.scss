@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: $wrapper;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+@media(min-width: $tablet) {
+    .wrapper {
+        padding: 0 20px;
+    }
+}

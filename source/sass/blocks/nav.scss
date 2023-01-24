@@ -1,0 +1,58 @@
+.nav {
+    margin-bottom: 10px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding-bottom: 15px;
+        overflow-x: scroll;
+    }
+
+    li {
+        margin-right: 18px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            width: max-content;
+            min-width: 72px;
+            transition: color 0.2s;
+
+            b {
+                font-size: 18px;
+                line-height: 1;
+                font-weight: bold;
+            }
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    li.red {
+        a {
+            color: $red;
+        }
+    }
+}
+
+@media(min-width: $tablet) {
+    .nav {
+        li {
+            margin-right: 34px;
+        }
+    }
+}
+
+@media(min-width: $desktop) {
+    .nav {
+        margin-bottom: 36px;
+    }
+}

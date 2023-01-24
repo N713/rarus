@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  @include reset();
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: $roboto;
+  color: $black;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img, picture, svg, video {
+  display: block;
+  height: auto;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.sprite {
+  background-image: url("../img/icons-png/sprite.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.sprite-png-icon-earphones {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+
+.sprite-png-icon-laptop {
+  width: 32px;
+  height: 32px;
+  background-position: -32px 0;
+}
+
+.sprite-png-icon-modem {
+  width: 32px;
+  height: 32px;
+  background-position: -64px 0;
+}
+
+.sprite-png-icon-photo {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -32px;
+}
+
+.sprite-png-icon-portaudio {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -32px;
+}
+
+.sprite-png-icon-printers {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -32px;
+}
+
+.sprite-png-icon-ps {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -64px;
+}
+
+.sprite-png-icon-smartphone {
+  width: 32px;
+  height: 32px;
+  background-position: -32px -64px;
+}
+
+.sprite-png-icon-smartspeaker {
+  width: 32px;
+  height: 32px;
+  background-position: -64px -64px;
+}
+
+.sprite-png-icon-smartwatches {
+  width: 32px;
+  height: 32px;
+  background-position: -96px 0;
+}
+
+.sprite-png-icon-tablet {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -32px;
+}
+
+.sprite-png-icon-tv {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -64px;
+}

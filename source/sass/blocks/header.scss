@@ -1,0 +1,53 @@
+.header {
+    display: none;
+}
+
+@media (min-width: $tablet) {
+    .header {
+        display: block;
+        border-bottom: 2px solid $lighterGray;
+        padding: 8px 0;
+
+        &__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__list,
+        &__tel {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-right: 36px;
+
+                span {
+                    transition: color 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+
+            svg {
+                margin-right: 8px;
+            }
+
+            a {
+                cursor: pointer;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

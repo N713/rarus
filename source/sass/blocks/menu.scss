@@ -1,0 +1,116 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $white;
+    width: 100%;
+    padding: 48px 0;
+    transition: transform 0.2s;
+
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    button {
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+        
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+
+            &::before,
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: 18px;
+                height: 2px;
+                background-color: $gray;
+                transition: background-color 0.2s;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            span {
+                &::before,
+                &::after {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+
+    &__list {
+        width: 100%;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8px 10px;
+            border-bottom: 2px solid $lighterGray;
+            position: relative;
+            transition: color 0.2s;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 8px;
+                height: 15px;
+                margin-left: auto;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='16' viewBox='0 0 8 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.13526 15.4981C0.87047 15.4986 0.613858 15.4116 0.40997 15.2522C0.295217 15.1624 0.200361 15.0522 0.130833 14.9278C0.0613047 14.8035 0.0184714 14.6674 0.00478626 14.5273C-0.0088989 14.3873 0.00683311 14.2461 0.0510809 14.1118C0.0953286 13.9776 0.167222 13.8528 0.262645 13.7448L5.33967 8.01466L0.443968 2.27382C0.349833 2.16447 0.279534 2.03865 0.237114 1.90358C0.194694 1.76852 0.180989 1.62688 0.196785 1.4868C0.212582 1.34672 0.257569 1.21097 0.329162 1.08735C0.400755 0.963727 0.497541 0.854671 0.613958 0.766449C0.731212 0.669126 0.868525 0.595716 1.01728 0.550828C1.16604 0.505939 1.32302 0.490541 1.47838 0.505598C1.63375 0.520656 1.78413 0.565844 1.9201 0.638329C2.05608 0.710813 2.1747 0.809027 2.26853 0.926808L7.7422 7.34116C7.90888 7.53244 8 7.77239 8 8.02001C8 8.26763 7.90888 8.50757 7.7422 8.69886L2.07587 15.1132C1.96218 15.2426 1.81777 15.3448 1.65434 15.4117C1.49091 15.4786 1.31308 15.5082 1.13526 15.4981Z' fill='%238D8D8D'/%3E%3C/svg%3E%0A");
+            }
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        i {
+            margin-right: 8px;
+        }
+
+        li {
+            &:last-of-type {
+                a {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.menu.none {
+    transform: translateX(-100%);
+}
+
+@media(min-width: $tablet) {
+    .menu {
+        display: none;
+    }
+}
